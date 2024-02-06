@@ -1,8 +1,8 @@
 <?php
 
-namespace :vendor_namespace\Tests;
+namespace Esign\OutboundIp\Tests;
 
-class :studly_package_nameTest extends TestCase
+class OutboundIpTest extends TestCase
 {
     /** @test */
     public function test()
