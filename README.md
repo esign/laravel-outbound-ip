@@ -17,7 +17,7 @@ composer require esign/laravel-outbound-ip
 ## Usage
 
 This package ships with both a command and a route to discover the outbound IP address of your server.
-These different strategries prove useful in scenarios where your servers utilizes different IP addresses for outgoing requests originating from SSH versus those from the web server.
+These different strategies prove useful in scenarios where your server utilizes different IP addresses for outgoing requests originating from SSH versus those from the web server.
 
 ### Using a command
 To discover the outbound IP address of your server's SSH jail, you may run the following command:
