@@ -4,7 +4,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/esign/laravel-outbound-ip.svg?style=flat-square)](https://packagist.org/packages/esign/laravel-outbound-ip)
 ![GitHub Actions](https://github.com/esign/laravel-outbound-ip/actions/workflows/main.yml/badge.svg)
 
-A short intro about the package.
+This package provides various ways to discover the outbound IP address of your server.
 
 ## Installation
 
@@ -14,16 +14,21 @@ You can install the package via composer:
 composer require esign/laravel-outbound-ip
 ```
 
-The package will automatically register a service provider.
-
-Next up, you can publish the configuration file:
-```bash
-php artisan vendor:publish --provider="Esign\OutboundIp\OutboundIpServiceProvider" --tag="config"
-```
-
 ## Usage
 
-### Testing
+This package ships with both a command and a route to discover the outbound IP address of your server.
+These different strategries prove useful in scenarios where your servers utilizes different IP addresses for outgoing requests originating from SSH versus those from the web server.
+
+### Using a command
+To discover the outbound IP address of your server's SSH jail, you may run the following command:
+```bash
+php artisan outbound-ip
+```
+
+### Using a route
+To discover the outbound IP address of your web server, you may visit the `/outbound-ip` route.
+
+## Testing
 
 ```bash
 composer test
