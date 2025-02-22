@@ -6,7 +6,7 @@ use PHPUnit\Framework\Attributes\Test;
 use Esign\OutboundIp\Tests\TestCase;
 use Illuminate\Support\Facades\Http;
 
-class OutboundIpControllerTest extends TestCase
+final class OutboundIpControllerTest extends TestCase
 {
     #[Test]
     public function it_can_get_the_outbound_ip(): void

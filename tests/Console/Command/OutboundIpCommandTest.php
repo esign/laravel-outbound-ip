@@ -7,7 +7,7 @@ use Esign\OutboundIp\Console\Commands\OutboundIpCommand;
 use Esign\OutboundIp\Tests\TestCase;
 use Illuminate\Support\Facades\Http;
 
-class OutboundIpCommandTest extends TestCase
+final class OutboundIpCommandTest extends TestCase
 {
     #[Test]
     public function it_can_get_the_outbound_ip(): void
