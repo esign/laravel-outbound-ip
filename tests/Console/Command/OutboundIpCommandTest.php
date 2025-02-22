@@ -2,14 +2,15 @@
 
 namespace Esign\OutboundIp\Tests\Console\Command;
 
+use PHPUnit\Framework\Attributes\Test;
 use Esign\OutboundIp\Console\Commands\OutboundIpCommand;
 use Esign\OutboundIp\Tests\TestCase;
 use Illuminate\Support\Facades\Http;
 
-class OutboundIpCommandTest extends TestCase
+final class OutboundIpCommandTest extends TestCase
 {
-    /** @test */
-    public function it_can_get_the_outbound_ip()
+    #[Test]
+    public function it_can_get_the_outbound_ip(): void
     {
         Http::fake(['ipecho.net/plain' => Http::response('99.99.99.99')]);
 
