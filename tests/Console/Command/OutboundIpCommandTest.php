@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Http;
 class OutboundIpCommandTest extends TestCase
 {
     #[Test]
-    public function it_can_get_the_outbound_ip()
+    public function it_can_get_the_outbound_ip(): void
     {
         Http::fake(['ipecho.net/plain' => Http::response('99.99.99.99')]);
 
